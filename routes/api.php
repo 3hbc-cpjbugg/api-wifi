@@ -23,6 +23,7 @@ Route::post('login',[RegisterController::class, 'login'])->name('login');
 Route::resource('config-site', ConfigSiteController::class);
 
 Route::middleware('auth:sanctum')->group(function () {
+   Route::post('update-photo-configuration',[ConfigSiteController::class,'updatePhotoConfiguration']);
    Route::resource('user', UserController::class);
 
 });
