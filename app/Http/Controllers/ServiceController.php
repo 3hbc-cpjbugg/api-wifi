@@ -80,5 +80,12 @@ class ServiceController extends BaseController
         return $this->sendResponse(null, 'Servicio eliminado correctamente', 204);
     }
 
+    public function getAllServices(){
+
+        $services = Service::all();
+
+
+        return $services;
+    }
 
 }

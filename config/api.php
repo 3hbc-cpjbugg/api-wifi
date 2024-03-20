@@ -40,8 +40,25 @@ return [
             'description',
 
         ],
-        'includes' => [
+        'includes' => []
+    ],
+    'cost' => [
+        'sorts' => [
+            'id',
+            'service_id',
+            'value',
+            'description'
 
+        ],
+        'fields' => [
+            'id',
+            'service_id',
+            'value',
+            'description',
+
+        ],
+        'includes' => [
+            'service'
         ]
     ]
 
