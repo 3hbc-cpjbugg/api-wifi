@@ -13,9 +13,9 @@ class Cost extends Model
         'service_id',
         'value',
         'description',
-
-
     ];
+
+    protected $appends = ["full_name_quotation"];
 
 
 
@@ -33,6 +33,13 @@ class Cost extends Model
 
     public function service(){
         return $this->hasOne(Service::class,'id','service_id');
+    }
+
+    public function getFullNameQuotationAttribute(){
+
+        $moneyFormatValue = number_format($this->value,2);
+
+        return "{$this->service->name} \${$moneyFormatValue} ($this->description)";
     }
 
 

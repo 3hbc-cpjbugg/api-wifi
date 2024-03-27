@@ -35,11 +35,7 @@ class CostController extends BaseController
             ->allowedIncludes(config('api.cost.includes'));
 
 
-        $costs = $paginate
-            ? $query->paginate($perPage)->appends($request->query())
-            : $query->get();
 
-        return response()->json($costs);
     }
 
 
@@ -85,5 +81,10 @@ class CostController extends BaseController
         return $this->sendResponse(null, 'Costo eliminado correctamente', 204);
     }
 
+    public function getAllCosts(){
+
+        $costs = Cost::all();
+        return response()->json($costs);
+    }
 
 }

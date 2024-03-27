@@ -60,6 +60,26 @@ return [
         'includes' => [
             'service'
         ]
+    ],
+
+    'quotation' => [
+        'sorts' => [
+            'id',
+            'description',
+            'status',
+            'status_date'
+
+        ],
+        'fields' => [
+            'id',
+            'description',
+            'status',
+            'status_date'
+
+        ],
+        'includes' => [
+            'quotations_costs'
+        ]
     ]
 
 ];
