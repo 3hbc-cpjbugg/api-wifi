@@ -16,5 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
         //
     ]);
 
-mix.copy('../casa-perez/dist/spa/index.html','resources/views/app.blade.php')
-    .copyDirectory('../casa-perez/dist/spa','public');
+mix.copy('../wifisesa/dist/spa/index.html','resources/views/app.blade.php')
+    .copyDirectory('../wifisesa/dist/spa','public');
