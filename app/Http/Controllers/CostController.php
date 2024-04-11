@@ -34,7 +34,11 @@ class CostController extends BaseController
             ->allowedFields(config('api.cost.fields'))
             ->allowedIncludes(config('api.cost.includes'));
 
+            $costs = $paginate
+            ? $query->paginate($perPage)->appends($request->query())
+            : $query->get();
 
+        return response()->json($costs);
 
     }
 
