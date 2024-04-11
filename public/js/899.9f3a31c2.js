@@ -1,0 +1,1 @@
+"use strict";(globalThis["webpackChunkclinica"]=globalThis["webpackChunkclinica"]||[]).push([[899],{4899:(a,i,l)=>{l.r(i),l.d(i,{default:()=>s});var n=l(2852);function r(a,i){return(0,n.uX)(),(0,n.CE)("div",null," Aqui irá el dashboard ")}var u=l(6317);const c={},e=(0,u.A)(c,[["render",r]]),s=e}}]);

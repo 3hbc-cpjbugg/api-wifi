@@ -1,0 +1,1 @@
+"use strict";(globalThis["webpackChunkclinica"]=globalThis["webpackChunkclinica"]||[]).push([[359],{6359:(i,n,a)=>{a.r(n),a.d(n,{default:()=>s});var c=a(2852);function l(i,n){return(0,c.uX)(),(0,c.CE)("div",null," Sitios ")}var u=a(6317);const r={},e=(0,u.A)(r,[["render",l]]),s=e}}]);

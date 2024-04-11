@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 return [
-
     'users' => [
         'sorts' => [
             'id',
@@ -27,59 +26,41 @@ return [
             'credits'
         ]
     ],
-    'service' => [
+    'site' => [
         'sorts' => [
-            'id',
-            'name',
-            'description'
-
+            'clave_sitio',
+            'clave_sitio_alterna',
+            'nombre_sitio',
+            'alias_sitio',
+            'calle_sitio',
+            'numero_sitio',
+            'colonia_sitio',
+            'municipio_sitio',
+            'estado_sitio',
+            'cp_sitio',
+            'latitud_sitio',
+            'longitud_sitio',
+            'proyecto_sitio',
+            'created_at',
+            'updated_at',
         ],
         'fields' => [
-            'id',
-            'name',
-            'description',
-
+            'clave_sitio',
+            'clave_sitio_alterna',
+            'nombre_sitio',
+            'alias_sitio',
+            'calle_sitio',
+            'numero_sitio',
+            'colonia_sitio',
+            'municipio_sitio',
+            'estado_sitio',
+            'cp_sitio',
+            'latitud_sitio',
+            'longitud_sitio',
+            'proyecto_sitio',
+            'created_at',
+            'updated_at',
         ],
         'includes' => []
     ],
-    'cost' => [
-        'sorts' => [
-            'id',
-            'service_id',
-            'value',
-            'description'
-
-        ],
-        'fields' => [
-            'id',
-            'service_id',
-            'value',
-            'description',
-
-        ],
-        'includes' => [
-            'service'
-        ]
-    ],
-
-    'quotation' => [
-        'sorts' => [
-            'id',
-            'description',
-            'status',
-            'status_date'
-
-        ],
-        'fields' => [
-            'id',
-            'description',
-            'status',
-            'status_date'
-
-        ],
-        'includes' => [
-            'quotations_costs'
-        ]
-    ]
-
 ];
