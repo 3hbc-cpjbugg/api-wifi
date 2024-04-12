@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreSiteRequest extends FormRequest
 {
@@ -30,7 +31,10 @@ class StoreSiteRequest extends FormRequest
             'colonia_sitio' => 'required|string',
             'municipio_sitio' => 'required|string',
             'estado_sitio' => 'required|string',
-            'cp_sitio' => 'required|numeric',
+            'cp_sitio' => [
+                'required',
+                Rule::exists('codigos_postales', 'd_codigo')
+            ],
             'latitud_sitio' => 'required|string',
             'longitud_sitio' => 'required|string',
         ];

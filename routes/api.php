@@ -27,4 +27,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('update-photo-configuration', [ConfigSiteController::class, 'updatePhotoConfiguration']);
     Route::resource('user', UserController::class);
     Route::resource('sites', SiteController::class);
+    Route::post('cp', [SiteController::class, 'cp']);
 });
