@@ -23,7 +23,8 @@ class SiteController extends Controller
         $query = QueryBuilder::for(Site::class)
             ->defaultSort('id')
             ->allowedFilters([
-                AllowedFilter::scope('search')
+                AllowedFilter::scope('search'),
+                AllowedFilter::exact('migrado_portalcautivo'),
             ])
             ->allowedSorts(config('api.site.sorts'))
             ->allowedFields(config('api.site.fields'))

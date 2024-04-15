@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SiteController;
-
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,4 +27,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('update-photo-configuration', [ConfigSiteController::class, 'updatePhotoConfiguration']);
     Route::resource('user', UserController::class);
     Route::resource('sites', SiteController::class);
+    Route::post('dashboard',[DashboardController::class, 'data']);
 });
