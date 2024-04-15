@@ -28,4 +28,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::resource('user', UserController::class);
     Route::resource('sites', SiteController::class);
     Route::post('dashboard',[DashboardController::class, 'data']);
+    Route::post('cp', [SiteController::class, 'cp']);
+
 });

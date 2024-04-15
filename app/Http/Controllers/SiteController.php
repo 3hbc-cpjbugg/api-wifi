@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateSiteRequest;
 use Illuminate\Http\Request;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
+use App\Models\Cp;
 
 class SiteController extends Controller
 {
@@ -70,5 +71,14 @@ class SiteController extends Controller
     {
         $site->delete();
         return response()->json('', 200);
+    }
+
+    public function cp(Request $request){
+
+        $query = Cp::where('d_codigo', 'LIKE', "%{$request->input('cp')}%")
+            ->limit(100)
+            ->get();
+
+        return response()->json($query, 200);
     }
 }
