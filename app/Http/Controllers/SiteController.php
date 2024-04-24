@@ -50,10 +50,11 @@ class SiteController extends BaseController
     }
 
 
-    public function show(Request $request, $id)
+    public function show(Request $request, $clave_sitio)
      {
-        return $id;
-        //return $this->sendResponse($sites, 'Configuración obtenida correctamente');
+        $site = Site::where('clave_sitio', $clave_sitio)->first();
+        
+        return $this->sendResponse($site, 'Configuración obtenida correctamente');
      }
 
     /**
