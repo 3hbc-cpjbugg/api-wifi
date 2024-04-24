@@ -48,6 +48,12 @@ class SiteController extends Controller
         return response()->json($model, 201);
     }
 
+
+    public function show(Request $request, Site $site)
+     {
+         return $this->sendResponse($site, 'Configuración obtenida correctamente');
+     }
+
     /**
      * Update the specified resource in storage.
      *
