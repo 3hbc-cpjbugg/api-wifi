@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Site;
 use App\Http\Requests\StoreSiteRequest;
+use App\Http\Controllers\BaseController as BaseController;
 use App\Http\Requests\UpdateSiteRequest;
 use Illuminate\Http\Request;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 use App\Models\Cp;
 
-class SiteController extends Controller
+class SiteController extends BaseController
 {
     /**
      * Display a listing of the resource.
