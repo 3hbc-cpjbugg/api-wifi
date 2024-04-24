@@ -49,9 +49,9 @@ class SiteController extends Controller
     }
 
 
-    public function show(Request $request, Site $site)
+    public function show(Request $request, Site $sites)
      {
-         return $this->sendResponse($site, 'Configuración obtenida correctamente');
+         return $this->sendResponse($sites, 'Configuración obtenida correctamente');
      }
 
     /**
